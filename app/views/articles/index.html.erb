@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Articles</h1>
+<h1><%= link_to 'Listing Articles', articles_path %></h1>
+
+<%= form_tag articles_path, method: :get do %>
+  <fieldset>
+    <legend>Search articles</legend>
+    <%= text_field_tag :search, params[:search] %>
+    <input type="submit" />
+  </fieldset>
+<% end %>
 
 <table>
   <thead>
