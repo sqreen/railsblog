@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Article.connection.execute("insert into users values(1, 'admin@test.com', '3f786850e387550fdab836ed7e6dc881de23001b', NOW(), NOW()) ")
+Article.create(title: "Hello World", text: "Content of our first post")
